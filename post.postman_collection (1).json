@@ -1,0 +1,723 @@
+{
+	"info": {
+		"_postman_id": "7ee106b8-f132-49f5-b8ce-c36bab8c9597",
+		"name": "post",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24104679"
+	},
+	"item": [
+		{
+			"name": "Get List",
+			"item": [
+				{
+					"name": "get post list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post",
+							"host": [
+								"{{host}}post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list  (post)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post",
+							"host": [
+								"{{host}}post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (page=0)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?page=0",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (page=1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?page=1",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (page=999)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?page=999",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (page=1000)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?page=1000",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (page=qwerty)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?page=qwerty",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "qwerty"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (page= )",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (limit=4)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?limit=4",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (limit=5)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?limit=5",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (limit=50)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?limit=50",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (limit=51)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?limit=51",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "51"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (limit=qwerty)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?limit=qwerty",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "qwerty"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (limit= )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?limit=",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (created=0)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?created=0",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (created=1)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?created=1",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (created=2)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?created=2",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (created=qwerty)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?created=qwerty",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": "qwerty"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get post list (created= )",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?created=",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "created",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Post",
+			"item": [
+				{
+					"name": "create post (text= )",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 43,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (text=5)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwert\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 43,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (text=6)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwerty\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 43,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (text=50)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwertyuiokjhgfdsazxcvbnmkjhgfdsaqwertyuikjhgfdsazx\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 43,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (text=51)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwertyuiokjhgfdsazxcvbnmkjhgfdsaqwertyuikjhgfdsazrx\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 43,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (text=кириллица)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"апеоаоапоапола\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 43,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (likes= )",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwerty\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": ,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (likes=1)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwerty\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 1,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (likes=текст)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwerty\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": fgh,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (owner= )",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwertyuiokjhgfdsazxcvbnmkjhgfdsaqwertyuikjhgfdsazx\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 43,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (owner=1)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwertyuiokjhgfdsazxcvbnmkjhgfdsaqwertyuikjhgfdsazx\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 43,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"60d0fe4f5311236168a109ca\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create post (owner=текст)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"qwertyuiokjhgfdsazxcvbnmkjhgfdsaqwertyuikjhgfdsazx\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 43,\r\n    \"tags\": [\r\n        \"animal\",\r\n        \"dog\",\r\n        \"golden retriever\"\r\n    ],\r\n    \"owner\": \"thfthtrjty\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}post/create",
+							"host": [
+								"{{host}}post"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{app-id}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "app-id",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
