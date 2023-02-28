@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "7ee106b8-f132-49f5-b8ce-c36bab8c9597",
+		"_postman_id": "09a8c48c-98f1-4cc7-8b5b-83c58259bbec",
 		"name": "post",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24104679"
+		"_exporter_id": "21530087"
 	},
 	"item": [
 		{
@@ -141,7 +141,19 @@
 					"name": "get post list (page= )",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host}}post?limit=",
+							"host": [
+								"{{host}}post"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": ""
+								}
+							]
+						}
 					},
 					"response": []
 				},
