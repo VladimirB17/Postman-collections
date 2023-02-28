@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "e9883129-0bcf-40ac-8c7e-1fff2fffedc3",
+		"name": "post test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21530087"
+	},
+	"item": [
+		{
+			"name": "GET POST LIST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 15000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(15000);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"data is array\", function () {\r",
+							"    pm.expect(jsonData.data).to.be.a('array');\r",
+							"});\r",
+							"pm.test(\"id[0] is string\", function () {\r",
+							"   pm.expect(jsonData.data[0].id).to.be.a('string');\r",
+							"});\r",
+							"pm.test(\"image is string\", function () {\r",
+							"   pm.expect(jsonData.data[0].image).to.be.a('string');\r",
+							"});\r",
+							"pm.test(\"likes is snumber\", function () {\r",
+							"   pm.expect(jsonData.data[0].likes).to.be.a('number');\r",
+							"});\r",
+							"pm.test(\"tags is array\", function () {\r",
+							"   pm.expect(jsonData.data[0].tags).to.be.a('array');\r",
+							"});\r",
+							"pm.test(\"text is string\", function () {\r",
+							"   pm.expect(jsonData.data[0].text).to.be.a('string');\r",
+							"});\r",
+							"pm.test(\"publishDate is string\", function () {\r",
+							"   pm.expect(jsonData.data[0].publishDate).to.be.a('string');\r",
+							"});\r",
+							"pm.test(\"updatedDate is string\", function () {\r",
+							"   pm.expect(jsonData.data[0].updatedDate).to.be.a('string');\r",
+							"});\r",
+							"pm.test(\"owner is object\", function () {\r",
+							"   pm.expect(jsonData.data[0].owner).to.be.a('object');\r",
+							"});\r",
+							"pm.test(\"link is undefined\", function () {\r",
+							"   pm.expect(jsonData.data[0].link).to.be.a('undefined');\r",
+							"});\r",
+							"pm.test(\"id[19] is string\", function () {\r",
+							"   pm.expect(jsonData.data[19].id).to.be.a('string');\r",
+							"});\r",
+							"pm.test(\"data[20] id undefined\", function () {\r",
+							"   pm.expect(jsonData.data[20]).to.be.a('undefined');\r",
+							"});\r",
+							"pm.test(\"limit\", function () {\r",
+							"    pm.expect(jsonData.limit).to.eql(20);\r",
+							"});\r",
+							"pm.test(\"page\", function () {\r",
+							"    pm.expect(jsonData.page).to.eql(0);\r",
+							"});\r",
+							"pm.test(\"total\", function () {\r",
+							"   pm.expect(jsonData.total).to.be.a('number');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}post",
+					"host": [
+						"{{host}}post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(9900);\r",
+							"});\r",
+							"pm.test(\"check text\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.text).to.eql(\"dgrgrdgrdgdr\");\r",
+							"});\r",
+							"pm.test(\"check tags\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tags).to.eql(['dog']);\r",
+							"});\r",
+							"pm.test(\"check image\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.image).to.eql(\"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.collectionVariables.set(\"posttid\", jsonData.id);\r",
+							"\r",
+							"pm.test(\"check owner title\", function () {\r",
+							"    pm.expect(jsonData.owner.title).to.eql(\"ms\");\r",
+							"});\r",
+							"pm.test(\"check owner firstname\", function () {\r",
+							"    pm.expect(jsonData.owner.firstName).to.eql(\"Sara\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check owner lastname\", function () {\r",
+							"    pm.expect(jsonData.owner.lastName).to.eql(\"Andersen\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check owner picture\", function () {\r",
+							"    pm.expect(jsonData.owner.picture).to.eql(\"https://randomuser.me/api/portraits/women/58.jpg\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check owner id\", function () {\r",
+							"    pm.expect(jsonData.owner.id).to.eql(\"60d0fe4f5311236168a109ca\");\r",
+							"});\r",
+							"pm.test(\"check likes\", function () {\r",
+							"    pm.expect(jsonData.likes).to.eql(4);\r",
+							"});\r",
+							"pm.test(\"check link\", function () {\r",
+							"    pm.expect(jsonData.link).to.eql(\"fdhgf\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"id is string\", function () {\r",
+							"    pm.expect('id').to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"publishDate is string\", function () {\r",
+							"    pm.expect('publishDate').to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"updatedDate is string\", function () {\r",
+							"    pm.expect('updatedDate').to.be.a('string');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"text\":\"dgrgrdgrdgdr\",\r\n\"image\":\"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n\"likes\":4,\r\n\"link\": \"fdhgf\",\r\n\"tags\":\"dog\",\r\n\"owner\":\"60d0fe4f5311236168a109ca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}post/create",
+					"host": [
+						"{{host}}post"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET POST BY ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(9900);\r",
+							"});\r",
+							"pm.test(\"check text\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.text).to.eql(\"dgrgrdgrdgdr\");\r",
+							"});\r",
+							"pm.test(\"check tags\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tags).to.eql(['dog']);\r",
+							"});\r",
+							"pm.test(\"check image\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.image).to.eql(\"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.collectionVariables.set(\"posttid\", jsonData.id);\r",
+							"\r",
+							"pm.test(\"check owner title\", function () {\r",
+							"    pm.expect(jsonData.owner.title).to.eql(\"ms\");\r",
+							"});\r",
+							"pm.test(\"check owner firstname\", function () {\r",
+							"    pm.expect(jsonData.owner.firstName).to.eql(\"Sara\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check owner lastname\", function () {\r",
+							"    pm.expect(jsonData.owner.lastName).to.eql(\"Andersen\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check owner picture\", function () {\r",
+							"    pm.expect(jsonData.owner.picture).to.eql(\"https://randomuser.me/api/portraits/women/58.jpg\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check owner id\", function () {\r",
+							"    pm.expect(jsonData.owner.id).to.eql(\"60d0fe4f5311236168a109ca\");\r",
+							"});\r",
+							"pm.test(\"check likes\", function () {\r",
+							"    pm.expect(jsonData.likes).to.eql(4);\r",
+							"});\r",
+							"pm.test(\"check link\", function () {\r",
+							"    pm.expect(jsonData.link).to.eql(\"fdhgf\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"id is string\", function () {\r",
+							"    pm.expect('id').to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"publishDate is string\", function () {\r",
+							"    pm.expect('publishDate').to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"updatedDate is string\", function () {\r",
+							"    pm.expect('updatedDate').to.be.a('string');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}post/{{posttid}}",
+					"host": [
+						"{{host}}post"
+					],
+					"path": [
+						"{{posttid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(9900);\r",
+							"});\r",
+							"pm.test(\"check text\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.text).to.eql(\"dgrgrdgrdgdr\");\r",
+							"});\r",
+							"pm.test(\"check tags\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tags).to.eql(['dog']);\r",
+							"});\r",
+							"pm.test(\"check image\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.image).to.eql(\"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\");\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.collectionVariables.set(\"posttid\", jsonData.id);\r",
+							"\r",
+							"pm.test(\"check owner title\", function () {\r",
+							"    pm.expect(jsonData.owner.title).to.eql(\"ms\");\r",
+							"});\r",
+							"pm.test(\"check owner firstname\", function () {\r",
+							"    pm.expect(jsonData.owner.firstName).to.eql(\"Sara\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check owner lastname\", function () {\r",
+							"    pm.expect(jsonData.owner.lastName).to.eql(\"Andersen\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check owner picture\", function () {\r",
+							"    pm.expect(jsonData.owner.picture).to.eql(\"https://randomuser.me/api/portraits/women/58.jpg\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"check owner id\", function () {\r",
+							"    pm.expect(jsonData.owner.id).to.eql(\"60d0fe4f5311236168a109ca\");\r",
+							"});\r",
+							"pm.test(\"check likes\", function () {\r",
+							"    pm.expect(jsonData.likes).to.eql(999);\r",
+							"});\r",
+							"pm.test(\"check link\", function () {\r",
+							"    pm.expect(jsonData.link).to.eql(\"fdhgf\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"id is string\", function () {\r",
+							"    pm.expect('id').to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"publishDate is string\", function () {\r",
+							"    pm.expect('publishDate').to.be.a('string');\r",
+							"});\r",
+							"\r",
+							"pm.test(\"updatedDate is string\", function () {\r",
+							"    pm.expect('updatedDate').to.be.a('string');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"likes\": 999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}post/{{posttid}}",
+					"host": [
+						"{{host}}post"
+					],
+					"path": [
+						"{{posttid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1500ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(9900);\r",
+							"});\r",
+							"pm.test(\"id post\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(pm.collectionVariables.get(\"posttid\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}post/{{posttid}}",
+					"host": [
+						"{{host}}post"
+					],
+					"path": [
+						"{{posttid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{app-id}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "app-id",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "postid",
+			"value": ""
+		},
+		{
+			"key": "posttid",
+			"value": ""
+		}
+	]
+}
