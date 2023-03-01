@@ -11,6 +11,18 @@
     
     2.2. [POST /post/create](#subparagraph2)
 3. [Майнд-карта](#paragraph2)
+4. [Чек-листы](#introduction1)
+
+    4.1. [Get List](#paragraph3)
+    
+    4.2. [Create Post](#subparagraph4)
+
+5. [Коллекции POSTMAN](#paragraph8)
+
+
+
+
+
 
 
 
@@ -115,11 +127,11 @@ Response Body (Пример)
 
 Также майнд-карту можно скачать [здесь](https://github.com/VladimirB17/DummyAPI/blob/main/Dummy_API%20(2).xmind)
 
-## Чек-листы
+## Чек-листы <a name="introduction1"></a>
 
 Также были оформлены чек-листы в соответствии с майнд-картой.
 
-**Get List**
+**Get List** <a name="paragraph3"></a>
 
 Открытие страницы без ввода значения
 
@@ -155,7 +167,7 @@ Response Body (Пример)
 
 Невозможность создания поста без введения значения параметра created
 
-**Create Post**
+**Create Post** <a name="subparagraph4"></a>
 
 Невозможность создания поста без введения теста
 
@@ -182,9 +194,12 @@ Response Body (Пример)
 Невозможность создания поста с указанием id пользователя текстом
 
 
-## Коллекции POSTMAN
+## Коллекции POSTMAN <a name="paragraph8"></a>
+Представленную коллекцию можно скачать [здесь](https://github.com/VladimirB17/DummyAPI/blob/main/post.postman_collection%20(1).json)
 
-## Автотесты
+Коллекцию автотестов вы можете скачать [здесь](https://github.com/VladimirB17/DummyAPI/blob/main/Автотесты.json)
+
+И конечно же окружение [здесь](https://github.com/VladimirB17/DummyAPI/blob/main/dummyAPI.postman_environment%20(1).json)
 
 
 
